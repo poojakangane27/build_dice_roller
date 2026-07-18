@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+     <style>
+        body {
+            background: linear-gradient(135deg,#f3eef9);
+            font-family: Arial, sans-serif;
+            text-align: center;
+            color: rgb(27, 26, 26);
+            height: 100vh;
+        }
+
+        h1 {
+            margin-top: 50px;
+            font-size: 40px;
+            letter-spacing: 2px;
+        }
+
+        #dice {
+            margin-top: 30px;
+            height: 120px;
+            transition: transform 0.3s;
+        }
+
+        #dice:hover {
+            transform: scale(1.2) rotate(10deg);
+        }
+
+        button {
+            margin-top: 30px;
+            padding: 12px 25px;
+            font-size: 18px;
+            border: none;
+            border-radius: 25px;
+            background-color: #ffcc00;
+            color: black;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #ffaa00;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Dice Roller</h1>
+    <img src="six.png" alt="" id="dice" height="100px" />
+    <br> <br>
+    <button type="button" onclick="rollDice()">Roll The Dice</button>
+
+    <script>
+        const diceImg = document.getElementById("dice");
+        function rollDice() {
+            const min = 1;
+            const max = 7;
+
+            const randomNumber = Math.floor(Math.random() * (max - min)) + min;
+            switch (randomNumber) {
+                case 1: diceImg.src = "one.png";
+                    console.log(randomNumber);
+                    break;
+                case 2: diceImg.src = "two.png";
+                    console.log(randomNumber);
+
+                    break;
+                case 3: diceImg.src = "three.png";
+                    console.log(randomNumber);
+
+                    break;
+                case 4: diceImg.src = "four.png";
+                    console.log(randomNumber);
+
+                    break;
+                case 5: diceImg.src = "five.png";
+                    console.log(randomNumber);
+
+                    break;
+                case 6: diceImg.src = "six.png";
+            }
+        }
+    </script>
+</body>
+
+</html>4ee4
